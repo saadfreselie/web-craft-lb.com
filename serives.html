@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(laptop.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif; /* Added a common font for better compatibility */
+        }
+
+        #fh1 {
+            position: relative;
+            color: black;
+            opacity: 0;
+            animation: fadeIn 4s infinite;
+            border-right: 4px solid black;
+            padding-right: 10px;
+            bottom: 300px;
+            left: 150px;
+            text-align: center; /* Centered the text */
+        }
+
+        .box {
+            width: 320px;
+            padding: 10px;
+            border: 5px solid black;
+            background-color: whitesmoke;
+            margin: 0;
+            transition: transform 1s ease-in-out;
+            text-align: center; /* Centered the text */
+        }
+
+        .box:hover {
+            transform: scale(1.5);
+        }
+
+        @keyframes fadeIn {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .click1 {
+            padding: 10px;
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            position: relative;
+            left: 620px;
+            bottom: 500px;
+            text-decoration: none; /* Added to remove underline on click */
+            color: black; /* Added for better visibility */
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            #first, #first1, #first2 {
+                width: 100%; /* Adjusted width for smaller screens */
+                margin: 10px; /* Added margin for better spacing on smaller screens */
+                right: 0; /* Removed the right positioning */
+                left: 0; /* Removed the left positioning */
+            }
+            .click1 {
+                left: 50%; /* Centered the link horizontally */
+                bottom: 10px; /* Adjusted the positioning for better visibility */
+            }
+        }
+        @media only screen and (max-width: 600px) {
+    #first, #first1, #first2 {
+        width: 90%; /* Adjusted width for smaller screens */
+        margin: 10px; /* Added margin for better spacing on smaller screens */
+    }
+    .click1 {
+        left: 50%; /* Centered the link horizontally */
+        bottom: 10px; /* Adjusted the positioning for better visibility */
+    }
+}
+#first, #first1, #first2 {
+        width: 320px;
+        max-width: 100%; /* Adjusted max-width for responsiveness */
+        padding: 10px;
+        border: 5px solid black;
+        margin: 0;
+        background-color: whitesmoke;
+        position: relative;
+        transition: transform 1s ease-in-out;
+    }
+
+    #first {
+        position: relative;
+        right: 590px;
+        margin-right: 20px; /* Adjusted margin for spacing */
+        margin-left: 10px; /* Adjusted margin for spacing */
+    }
+
+    #first1 {
+        position: relative;
+        right: 200px;
+        margin-right: 20px; /* Adjusted margin for spacing */
+        margin-left: 10px; /* Adjusted margin for spacing */
+    }
+
+    #first2 {
+        position: relative;
+        left: 200px;
+        margin-left: 20px; /* Adjusted margin for spacing */
+        margin-right: 10px; /* Adjusted margin for spacing */
+    }
+
+    /* ... (existing styles) ... */
+
+    /* Responsive Design */
+    @media only screen and (max-width: 600px) {
+        #first, #first1, #first2 {
+            width: 90%; /* Adjusted width for smaller screens */
+            max-width: none; /* Removed max-width for smaller screens */
+            margin: 10px auto; /* Centered the elements horizontally */
+            position: relative;
+            right: 0;
+            left: 0;
+        }
+        .click1 {
+            left: 50%; /* Centered the link horizontally */
+            bottom: 10px; /* Adjusted the positioning for better visibility */
+        }
+    }
+    </style>
+</head>
+<body>
+
+<h1 id="fh1">Your request is our duty.</h1>
+<form>
+    <div class="box" id="first">
+        <h1>Registration forms.<br></h1>
+        <p>User-friendly and easy to understand for anyone.<br>We will provide for you the best registration forms.<br>That match your theme design and make your wishes come true.</p>
+    </div>
+    <div class="box" id="first1">
+        <h1>Representation.<br></h1>
+        <p>We will present your work in the best possible way<br>in the shortest time and get your business running.<br>We will get your site going in approximately 1 week<br>depends on how big it is.</p>
+    </div>
+    <div class="box" id="first2">
+        <h1>Plans.<br></h1>
+        <p><b>Full website:</b> $100<br><b>Monthly subscription:</b> 5 updates for $50/month<br><b>$80 for 10 updates or $100 for 20 updates</b><br><b>Updates without monthly subscription:</b> $20 per update</p>
+    </div>
+    <a href="aboutus.html" class="click1">&#10140;</a>
+    <a href="mysite.html" style="text-align: center; display: block; margin-top: 10px;">Home Page</a>
+</form>
+
+</body>
+</html>

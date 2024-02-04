@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Drop</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Set the height to the full viewport height */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-top: 0;
+            opacity: 0;
+            animation: slideAndFade 1.5s ease-out forwards, bounceIn 1s 2s ease-out forwards;
+            font-size: 2.5em;
+            font-style: italic;
+            color: darkgray;
+        }
+
+        main p {
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideAndFade 1.5s 0.5s ease-out forwards, bounceIn 1s 2s ease-out forwards;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0099cc;
+        }
+
+        @keyframes slideAndFade {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .click {
+            padding: 10px;
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -20px; /* Center the button vertically */
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-shadow: #777;">
+        <h1>Web Craft Lb</h1>
+    </header>
+    <nav>
+        <a href="serives.html">SERVICES</a>
+        <a href="aboutus.html">CONTACT US</a>
+        <a href="register.html">REGISTER</a>
+    </nav>
+    <main>
+        <!-- Add ID to h2 and p tags -->
+        <h2 id="creative-heading">We Are Creative</h2>
+        <p id="creative-description">Watch us rock your world with our web design capabilities</p>
+    </main>
+    <a href="serives.html">
+        <button class="click"> </button>
+    </a>
+    <footer style="position: relative; top: 600px;">
+        &copy; 2023 Web Craft Lb
+    </footer>
+</body>
+
+</html>
